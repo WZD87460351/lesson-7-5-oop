@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var str = 'ggggjjja'
+		String.prototype.repeatify = function(){
+			return 'ddddddddddd';
+		}
+		String.prototype.repeatify = function(n){
+			var res = '';
+			for(var i = 0;i<n;i++){
+				res += this;
+			}
+			return res;
+		}
+		
+		/*String.prototype.repeatify = String.prototype.repeatify || function(n){
+			var res = '';
+			for(var i = 0;i<n;i++){
+				res += str;
+			}
+			return res;
+		}*/
+		console.log(str.repeatify(3));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

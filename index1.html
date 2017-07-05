@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			function* play(){
+				yield 1
+				yield 2
+				return 6 //执行到此结束
+				yield 3
+				yield 4
+			}
+			var pp = play();
+			alert(play().next().value);
+			alert(pp.next().value);
+			alert(pp.next().value);//弹出6结束
+			alert(pp.next().value);
+			alert(pp.next().value);
+			for(let v of play()){
+				console.log(v);
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>oop</title>
+	<script>
+		function Team(name,age,salary){
+			this.name = name;
+			this.age = age;
+			this.salary = salary;
+		}
+		Team.prototype.showname = function(){
+			alert(this.name);
+		}
+		
+		Team.prototype.showage = function(){
+			alert(this.age);
+		}
+		
+		var team1 = new Team('aaa',17,3000)
+		var team2 = new Team('nnn',15,4000)
+		team1.showage();
+		team2.showage();
+		alert(team1.showage == team2.showage)
+		team1.showname();
+		team2.showname();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

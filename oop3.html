@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>oop3</title>
+	<script>
+		Object.prototype.date = 'ggg';
+		var obi = {
+			name:'jjjj',
+			age:90
+		}
+		
+		for(var i in obi){
+			console.log(i+'<br>');
+		}
+		
+		for(var i in obi){
+			if(obi.hasOwnProperty(i)){
+				console.log(i);
+			}
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

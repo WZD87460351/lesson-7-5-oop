@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>promise</title>
+	<script>
+		/*var promise = new Promise(function(res,rej){
+			if(async success){
+				 res(value)
+			}else{
+				rej(error)
+			}
+		})
+		
+		promise.then(function(){
+			//success
+		},function(){
+			//failure
+		})*/
+		
+		/*var promise = new Promise(function(res,rej){
+			console.log('init promise')
+			res();
+		})
+		
+		promise.then(function(){
+		console.log('callback finished')
+		})
+		
+		console.log('next');*/
+		
+		var promise = new Promise(function(res,rej){
+			let a = 0;
+			for(let i = 0;i<3;i++){
+				a++;
+			}
+			if(a == 3){
+				 res(a)
+			}else{
+				rej(a)
+			}
+		})
+		
+		promise.then(function(a){
+			console.log('a:'+a);
+		},function(a){
+			console.error('a:'+a)
+		})
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
